@@ -1,18 +1,14 @@
-## Laravel Testing Series Part 2: Mastering Pest PHP Course Files on Udemy
+## Laravel Testing With Pest
 
-<img src="https://img-c.udemycdn.com/course/750x422/6740595_9644.jpg"> 
-
-**Created By :** Mahmoud Anwar
-**Email :** Engsahaly@gmail.com
-
-This is the main readme file for the code used in laravel testing Series Part 2 using Pest PHP course on Udemy
+**Created By :** malagi
+**Email :** malagi@gmail.com
 
 ## Installation
 
 To get started, clone this repository.
 
 ```
-git clone https://github.com/engsahaly/Laravel_testing_series_pest_php.git
+git clone https://github.com/MrSoosGabor/Laravel_testing_with_pest.git
 ```
 
 Next, copy your `.env.example` file as `.env` and configure your Database connection.
@@ -23,7 +19,7 @@ DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=YOUR-DATABASE-NAME
 DB_USERNAME=YOUR-DATABASE-USERNAME
-DB_PASSWORD=YOUR-DATABASE-PASSWROD
+DB_PASSWORD=YOUR-DATABASE-PASSWORD
 ```
 
 ## Run Packages and helpers
@@ -51,4 +47,10 @@ You have to run all the migration files included with the project and also run s
 ```
 php artisan migrate
 php artisan db:seed
+```
+
+## Project Execution
+
+```
+php artisan serve
 ```
