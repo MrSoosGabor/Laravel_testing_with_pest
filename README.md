@@ -54,3 +54,61 @@ php artisan db:seed
 ```
 php artisan serve
 ```
+
+
+## A `pa` rövidítés beállítása Windows alatt
+
+Ha nem szeretnéd minden alkalommal kiírni a `php artisan` szöveget, hozz létre egy
+`pa` rövidítést a terminálban. Ezután például a `php artisan migrate` helyett a
+`pa migrate` parancsot használhatod.
+
+### PowerShell esetén (tartós beállítás)
+
+1. Nyisd meg a PowerShell profilfájlját:
+
+```powershell
+notepad $PROFILE
+```
+
+2. Add hozzá ezt a sort:
+
+```powershell
+function pa { php artisan $args }
+```
+
+3. Mentsd el a fájlt, majd indítsd újra a terminált. Ha a profilfájl még nem
+létezik, előbb hozd létre:
+
+```powershell
+New-Item -ItemType File -Path $PROFILE -Force
+notepad $PROFILE
+```
+
+Ellenőrzés:
+
+```powershell
+pa --version
+```
+
+### CMD esetén (az aktuális terminálhoz)
+
+A CMD-ben futtasd:
+
+```cmd
+doskey pa=php artisan $*
+```
+
+Ez a rövidítés csak az aktuális CMD-ablak bezárásáig él. Ezután használhatod
+például így:
+
+```cmd
+pa migrate
+pa db:seed
+pa serve
+```
+
+VS Code-ban Markdown előnézet megnyitása:
+
+Ctrl + Shift + V – előnézet az aktuális fülön
+Ctrl + K, majd V – előnézet új oldalsó panelen
+A Markdown fájl szerkesztőnézetébe az Esc billentyűvel térhetsz vissza.
