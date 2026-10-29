@@ -54,7 +54,12 @@ php artisan db:seed
 ```
 php artisan serve
 ```
-
+Ha a test környezettel akarod elindítani a szervert, akkor a projekt gyökérmappájából PowerShellben állítsd be az APP_ENV értékét, mielőtt elindítod a szervert:
+---
+$env:APP_ENV = 'testing'
+php artisan config:clear
+php artisan serve
+---
 
 ## A `pa` rövidítés beállítása Windows alatt
 
